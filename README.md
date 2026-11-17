@@ -26,19 +26,33 @@
 
 ```text 
 Sprint_6/
-├── pages/ # Page Object Model
-│ ├── init.py
-│ ├── main_page.py # Page Object для главной страницы
-│ └── order_page.py # Page Object для страницы заказа
-├── tests/ # Тесты
-│ ├── init.py
-│ ├── test_faq.py # Тесты FAQ (8 параметризованных тестов)
-│ ├── test_order.py # Тесты заказа (2 параметризованных теста)
-│ └── test_logo.py # Тесты логотипов (2 теста)
-├── conftest.py # Фикстура драйвера Firefox
-├── requirements.txt # Зависимости проекта
-├── allure-report/ # Сгенерированный Allure-отчёт
-└── README.md 
+├── data/
+│   ├── __init__.py
+│   ├── urls.py              # урлы и эндпоинты
+│   ├── faq_data.py          # данные FAQ 
+│   └── order_data.py        # данные заказа 
+├── helpers/
+│   ├── __init__.py
+│   └── date_helper.py       # функция расчёта даты 
+├── locators/
+│   ├── __init__.py
+│   ├── base_page_locators.py
+│   ├── main_page_locators.py    
+│   └── order_page_locators.py   
+├── pages/
+│   ├── __init__.py
+│   ├── base_page.py  
+│   ├── main_page.py   # Page Object для главной страницы
+│   └── order_page.py  # Page Object для страницы заказа
+├── tests/
+│   ├── __init__.py
+│   ├── test_faq.py     # Тесты FAQ (8 параметризованных тестов)
+│   ├── test_order.py   # Тесты заказа (2 параметризованных теста)
+│   └── test_logo.py    # Тесты логотипов (2 теста)
+├── conftest.py         # Фикстура драйвера Firefox
+├── requirements.txt    # Зависимости проекта
+├── allure_report/ # Сгенерированный Allure-отчёт
+└── README.md
 ```
 
 ### 1. Клонирование репозитория
