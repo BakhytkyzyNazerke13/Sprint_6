@@ -8,9 +8,9 @@ from pages.base_page import BasePage
 class OrderPage(BasePage):
     """Page Object для страницы оформления заказа"""
 
-    def is_order_page_opened(self):
-        """Проверяет, что открыта страница заказа"""
-        return self.is_url_to_be(ORDER_URL)
+    def wait_until_opened(self):
+        """Ждёт, пока откроется страница заказа"""
+        self.wait_url_to_be(ORDER_URL)
 
     def _select_metro(self, metro):
         """Вводит станцию и выбирает её в списке обычным кликом"""

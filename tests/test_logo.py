@@ -18,7 +18,7 @@ class TestLogo:
         # Уходим на страницу заказа, чтобы проверить возврат на главную
         main_page.click_order_button(MainPageLocators.ORDER_BUTTON_TOP)
         order_page = OrderPage(driver)
-        assert order_page.is_order_page_opened(), "Страница заказа не открылась"
+        order_page.wait_until_opened()
 
         order_page.click_scooter_logo()
 

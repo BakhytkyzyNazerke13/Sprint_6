@@ -31,6 +31,10 @@ class BasePage:
         except TimeoutException:
             return False
 
+    def wait_url_to_be(self, url):
+        """Ждёт, пока URL станет равен url (без возврата результата)"""
+        self.wait.until(EC.url_to_be(url))
+
     def is_url_contains(self, text):
         """Ждёт, пока URL будет содержать text (с учётом редиректа)"""
         try:
